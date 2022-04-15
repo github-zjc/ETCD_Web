@@ -1,0 +1,28 @@
+body {
+    background-color: antiquewhite;
+}
+
+div {
+    font-size: 16px;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    line-height: 200px;
+    /*文字水平居中*/
+    margin: auto;
+    /*div水平居中*/
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none
+}
+
+button {
+    text-align: center;
+}
+

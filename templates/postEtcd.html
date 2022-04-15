@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加数据</title>
+    <link rel="stylesheet" href="/xxx/index.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div>
+            <a href="/getEtcd" style="color:blue">查询数据</a>
+            <a href="/" style="color:blue">返回主页</a>
+        </div>
+
+    </div>
+    <p align="center">
+        键: <input type="text" placeholder="请输入内容" id="key">
+        值: <input type="text" placeholder="请输入内容" id="value"><br>
+        <button onclick="get()">添加数据</button>
+    </p>
+    <script>
+        //js传送方法
+        function get() {
+            var key = document.getElementById("key").value;
+            var value = document.getElementById("value").value;
+            var xml = new XMLHttpRequest();
+            xml.open("get", "http://localhost:8080/Test/etcd?one=" + key + "&two=" + value, true);
+            xml.onreadystatechange = function () {
+
+            };
+            xml.send();
+        }
+    </script>
+
+</body>
+
+</html>
